@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/minTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="50dp"
+        android:autoSizeMaxTextSize="500sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="00"
+        app:layout_constraintBottom_toTopOf="@id/addFiveMinBtn"
+        app:layout_constraintDimensionRatio="0.65"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/secTv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/secTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text=":00"
+        app:layout_constraintBottom_toTopOf="@id/addMinBtn"
+        app:layout_constraintDimensionRatio="0.65"
+        app:layout_constraintLeft_toRightOf="@id/minTv"
+        app:layout_constraintRight_toLeftOf="@id/milTv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/milTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="50dp"
+        android:autoSizeMaxTextSize="80sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center|left"
+        android:text=".00"
+        app:layout_constraintBottom_toTopOf="@id/addSecBtn"
+        app:layout_constraintDimensionRatio="0.65"
+        app:layout_constraintLeft_toRightOf="@id/secTv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addFiveMinBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/button_design"
+        android:gravity="center"
+        android:text="5분"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@id/startBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/addMinBtn"
+        app:layout_constraintTop_toBottomOf="@id/minTv" />
+
+    <Button
+        android:id="@+id/addMinBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/button_design"
+        android:gravity="center"
+        android:text="1분"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@id/startBtn"
+        app:layout_constraintLeft_toRightOf="@id/addFiveMinBtn"
+        app:layout_constraintRight_toLeftOf="@id/addSecBtn"
+        app:layout_constraintTop_toBottomOf="@id/secTv" />
+
+    <Button
+        android:id="@+id/addSecBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/button_design"
+        android:gravity="center"
+        android:text="30초"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@id/stopBtn"
+        app:layout_constraintLeft_toRightOf="@id/addMinBtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/milTv" />
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/button_design"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="시작하기"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/stopBtn"
+        app:layout_constraintTop_toBottomOf="@id/addFiveMinBtn" />
+
+    <Button
+        android:id="@+id/stopBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/button_design"
+        android:gravity="center"
+        android:text="초기화"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/startBtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addSecBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
